@@ -1,8 +1,7 @@
 ---
 draft: true
 
-title: {{ replace .Name "-" " " | title }}
-subtitle: ""
+title: ""
 description: ""
 date: {{ .Date }}
 images:
