@@ -10,19 +10,7 @@
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
-{{ {{ template "_internal/schema.html" . }}}}
-
-<title>{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}</title>
-
-{{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "postcss.config.js") }}
-
-{{- if .Site.IsServer }}
-	<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-{{ else }}
-	{{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
-{{ end -}}
-
+{{ template "_internal/schema.html" . }}
 
 {{ with .OutputFormats.Get "RSS" }}
 <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
