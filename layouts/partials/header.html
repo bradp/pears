@@ -1,0 +1,12 @@
+{{ $page := . }}
+{{ if .IsHome }}
+
+{{ else }}
+	<header>
+		<h1>{{ .Site.Title }}</h1>
+
+		<nav>
+			<a href="/">link</a>
+		</nav>
+	</header>
+{{ end }}

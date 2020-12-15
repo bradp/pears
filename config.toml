@@ -1,0 +1,40 @@
+# Site Details
+title = "Hugo/Tailwind Template "
+description = "This is a description!"
+baseURL = "https://example.com/"
+
+# Language
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+# Build
+canonifyUrls = true
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = true
+disableFastRender = true
+
+# Content
+disableKinds = ["taxonomy", "term"]
+enableEmoji = true
+enableInlineShortcodes = true
+summaryLength = 40
+
+
+[params]
+	Subtitle = "This is a subtitle!"
+
+[permalinks]
+	posts = "/:year/:month/:title/"
+
+[imaging]
+	resampleFilter = 'Lanczos'
+	quality = 85
+
+[imaging.exif]
+	includeFields = ""
+	disableDate = true
+	disableLatLong = true
+
+[build]
+	writeStats = true

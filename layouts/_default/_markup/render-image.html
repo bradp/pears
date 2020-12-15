@@ -1,0 +1,25 @@
+{{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $large := $image.Resize "1200x" }}
+{{ $medium := $image.Resize "768x" }}
+{{ $small := $image.Resize "480x" }}
+
+{{ $alt := .PlainText | safeHTML }}
+{{ $title := .Title | emojify | safeHTML }}
+
+
+<figure>
+	<img
+		loading="lazy"
+		sizes="100vw"
+		srcset="
+			{{ $small.RelPermalink }} 480w,
+			{{ $medium.RelPermalink }} 768w,
+			{{ $large.RelPermalink }} 1200w"
+		src="{{ $image.RelPermalink }}"
+		width="{{ $image.Width }}"
+		height="{{ $image.Height }}"
+		alt="{{ if $alt }}{{ $alt }}{{ else }}&nbsp;{{ end }}"
+		{{ with $title }} title="{{ . }}" {{end}}"
+	>
+	{{ with $title }} <figcaption>{{ . }}</figcaption> {{ end }}
+</figure>

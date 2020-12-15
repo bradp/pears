@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}</title>
+
+{{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "postcss.config.js") }}
+
+{{- if .Site.IsServer }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ else }}
+	{{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end -}}
+
+
+{{ with .OutputFormats.Get "RSS" }}
+<link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">

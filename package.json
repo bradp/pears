@@ -1,0 +1,50 @@
+{
+	"name": "starter",
+	"version": "1.0.0",
+	"description": "A starting point for a Hugo + TailwindCSS powered static site.",
+	"author": {
+		"name": "Brad Parbs",
+		"email": "brad@bradparbs.com",
+		"url": "https://bradparbs.com"
+
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/bradp/starter",
+	"bugs": "https://github.com/bradp/starter/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bradp/starter.git"
+	},
+	"keywords": [
+		"hugo",
+		"tailwind",
+		"tailwindcss",
+		"postcss",
+		"purgecss",
+		"static-site",
+		"starter",
+		"boilerplate"
+	],
+	"dependencies": {
+		"@tailwindcss/forms": "^0.2.1",
+		"@tailwindcss/typography": "^0.3.1",
+		"autoprefixer": "^10.1.0",
+		"cssnano": "^4.1.10",
+		"live-server": "^1.2.1",
+		"opener": "^1.5.2",
+		"postcss": "^8.2.1",
+		"postcss-cli": "^8.3.1",
+		"postcss-import": "^14.0.0",
+		"postcss-purgecss": "^2.0.3",
+		"tailwindcss": "^2.0.2"
+	},
+	"scripts": {
+		"start": "yarn run build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313",
+		"build": "yarn run build:css",
+		"build:prod": "yarn run build:css:prod && build:hugo",
+		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
+		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
+		"build:hugo": "hugo --gc --minify",
+		"clean": "rm -rf public"
+	}
+}
