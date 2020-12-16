@@ -30,7 +30,7 @@
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
 		"build:hugo": "hugo --gc --minify",
 		"build:prod": "yarn run build:css:prod && build:hugo",
-		"format": "prettier .",
+		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"postinstall": "husky install",
 		"lint": "yarn run lint:css",
