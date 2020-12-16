@@ -6,7 +6,6 @@
 		"name": "Brad Parbs",
 		"email": "brad@bradparbs.com",
 		"url": "https://bradparbs.com"
-
 	},
 	"license": "MIT",
 	"homepage": "https://github.com/bradp/starter",
@@ -30,6 +29,7 @@
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^4.1.10",
+		"husky": "^4.3.6",
 		"live-server": "^1.2.1",
 		"opener": "^1.5.2",
 		"postcss": "^8.2.1",
@@ -48,5 +48,10 @@
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
 		"build:hugo": "hugo --gc --minify",
 		"clean": "rm -rf public"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	}
 }
