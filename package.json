@@ -2,18 +2,6 @@
 	"name": "starter",
 	"version": "1.0.0",
 	"description": "A starting point for a Hugo + TailwindCSS powered static site.",
-	"author": {
-		"name": "Brad Parbs",
-		"email": "brad@bradparbs.com",
-		"url": "https://bradparbs.com"
-	},
-	"license": "MIT",
-	"homepage": "https://github.com/bradp/starter",
-	"bugs": "https://github.com/bradp/starter/issues",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/bradp/starter.git"
-	},
 	"keywords": [
 		"hugo",
 		"tailwind",
@@ -24,44 +12,50 @@
 		"starter",
 		"boilerplate"
 	],
-	"dependencies": {
-		"@tailwindcss/forms": "^0.2.1",
-		"@tailwindcss/typography": "^0.3.1",
-		"autoprefixer": "^10.1.0",
-		"cssnano": "^4.1.10",
-		"eslint": "^7.15.0",
-		"lint-staged": "^10.5.3",
-		"live-server": "^1.2.1",
-		"opener": "^1.5.2",
-		"postcss": "^8.2.1",
-		"postcss-cli": "^8.3.1",
-		"postcss-import": "^14.0.0",
-		"postcss-purgecss": "^2.0.3",
-		"prettier": "2.2.1",
-		"prettier-plugin-go-template": "^0.0.10",
-		"prettier-plugin-packagejson": "^2.2.8",
-		"prettier-plugin-tailwind": "^2.2.8",
-		"prettier-plugin-toml": "0.3.1",
-		"stylelint": "^13.8.0",
-		"stylelint-config-standard": "^20.0.0",
-		"tailwindcss": "^2.0.2"
+	"homepage": "https://github.com/bradp/starter",
+	"bugs": "https://github.com/bradp/starter/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bradp/starter.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Brad Parbs",
+		"email": "brad@bradparbs.com",
+		"url": "https://bradparbs.com"
 	},
 	"scripts": {
-		"start": "yarn run build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313",
 		"build": "yarn run build:css",
-		"build:prod": "yarn run build:css:prod && build:hugo",
 		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
 		"build:hugo": "hugo --gc --minify",
-		"format:check": "prettier --check .",
+		"build:prod": "yarn run build:css:prod && build:hugo",
 		"format": "prettier .",
+		"format:check": "prettier --check .",
+		"postinstall": "husky install",
 		"lint": "yarn run lint:css",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
-		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix"
+		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
+		"start": "yarn run build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313"
 	},
 	"lint-staged": {
 		"**/*.{css,html,js,json,md,toml}": [
 			"prettier --write"
+		]
+	},
+	"prettier": {
+		"printWidth": 120,
+		"twUnknownClassesPosition": "end",
+		"useTabs": true,
+		"overrides": [
+			{
+				"files": [
+					"*.html"
+				],
+				"options": {
+					"parser": "go-template"
+				}
+			}
 		]
 	},
 	"stylelint": {
@@ -86,19 +80,29 @@
 			"assets/css/build.css"
 		]
 	},
-	"prettier": {
-		"printWidth": 120,
-		"useTabs": true,
-		"twUnknownClassesPosition": "end",
-		"overrides": [
-			{
-				"files": [
-					"*.html"
-				],
-				"options": {
-					"parser": "go-template"
-				}
-			}
-		]
+	"dependencies": {
+		"@tailwindcss/forms": "^0.2.1",
+		"@tailwindcss/typography": "^0.3.1",
+		"autoprefixer": "^10.1.0",
+		"cssnano": "^4.1.10",
+		"eslint": "^7.15.0",
+		"lint-staged": "^10.5.3",
+		"live-server": "^1.2.1",
+		"opener": "^1.5.2",
+		"postcss": "^8.2.1",
+		"postcss-cli": "^8.3.1",
+		"postcss-import": "^14.0.0",
+		"postcss-purgecss": "^2.0.3",
+		"prettier": "2.2.1",
+		"prettier-plugin-go-template": "^0.0.10",
+		"prettier-plugin-packagejson": "^2.2.8",
+		"prettier-plugin-tailwind": "^2.2.8",
+		"prettier-plugin-toml": "0.3.1",
+		"stylelint": "^13.8.0",
+		"stylelint-config-standard": "^20.0.0",
+		"tailwindcss": "^2.0.2"
+	},
+	"devDependencies": {
+		"husky": "^5.0.6"
 	}
 }
