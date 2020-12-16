@@ -2,23 +2,21 @@
 title = "starter"
 description = "This is a description!"
 baseURL = "https://example.com/"
-[params]
-	# Used for Open Graph tags & Twitter card tags.
-	title = "starter"
-    description = "This is used in og tags"
-    images = ["images/share-image.png"]
 
+[params]
+# Used for Open Graph tags & Twitter card tags.
+title = "starter"
+description = "This is used in og tags"
+images = ["images/share-image.png"]
 # Language
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-
 # Build
 canonifyUrls = true
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
 enableGitInfo = true
 disableFastRender = true
-
 # Content
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
@@ -26,19 +24,19 @@ enableInlineShortcodes = true
 summaryLength = 40
 
 [permalinks]
-	posts = "/:year/:month/:title/"
+posts = "/:year/:month/:title/"
 
 [imaging]
-	resampleFilter = 'Lanczos'
-	quality = 85
+resampleFilter = 'Lanczos'
+quality = 85
 
 [imaging.exif]
-	includeFields = ""
-	disableDate = true
-	disableLatLong = true
+includeFields = ""
+disableDate = true
+disableLatLong = true
 
 [build]
-	writeStats = true
+writeStats = true
 
 [social]
-	twitter = "username"
+twitter = "username"

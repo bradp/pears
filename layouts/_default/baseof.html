@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      {{ partial "head/metadata.html" . }}
+	<head>
+		{{ partial "head/metadata.html" . }}
 
-      <title>{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}</title>
+		<title>
+			{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}
+		</title>
 
-      {{ partial "head/styles.html" . }}
-  </head>
+		{{ partial "head/styles.html" . }}
+	</head>
 
-  <body class="relative min-h-screen bg-gray-100">
-    <div id="top"></div>
+	<body class="relative min-h-screen bg-gray-100">
+		<div id="top"></div>
 
-    {{- partial "header.html" . -}}
+		{{- partial "header.html" . -}}
 
-    {{ $mainClass := "text-xl leading-loose font-light subpixel-antialiased" }}
+		{{ $mainClass := "text-xl leading-loose font-light subpixel-antialiased" }}
 
-    {{ if .IsHome }}
-      {{ $mainClass = "lg:max-w-5xl xl:max-w-6xl 2xl:max-w-screen-xl" }}
-    {{ end }}
+		{{ if .IsHome }}
+			{{ $mainClass = "lg:max-w-5xl xl:max-w-6xl 2xl:max-w-screen-xl" }}
+		{{ end }}
 
-    <main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible {{ $mainClass }}">
-      {{- block "main" . }}{{- end }}
-    </main>
+		<main class="mx-auto pt-8 px-4 w-full overflow-x-hidden md:max-w-4xl md:overflow-visible {{ $mainClass }}">
+			{{- block "main" . }}{{- end }}
+		</main>
 
-    {{- partial "footer.html" . -}}
-  </body>
+		{{- partial "footer.html" . -}}
+	</body>
 </html>
