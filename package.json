@@ -42,7 +42,7 @@
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
 		"lint:fix": "yarn run lint:css:fix",
-		"start": "yarn run build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313"
+		"start": "yarn run build && opener http://localhost:53214 && hugo server --buildDrafts --port 53214"
 	},
 	"lint-staged": {
 		"*.css": [
