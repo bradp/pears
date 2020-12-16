@@ -39,7 +39,10 @@
 		"start": "yarn run build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313"
 	},
 	"lint-staged": {
-		"**/*.{css,html,js,json,md,toml}": [
+		"*.css": [
+			"stylelint"
+		],
+		"*.{css,html,js,json,md,toml}": [
 			"prettier --write"
 		]
 	},
