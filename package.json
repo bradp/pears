@@ -36,8 +36,13 @@
 		"postcss-cli": "^8.3.1",
 		"postcss-import": "^14.0.0",
 		"postcss-purgecss": "^2.0.3",
-		"prettier": "^2.2.1",
+		"prettier": "2.2.1",
 		"prettier-plugin-go-template": "^0.0.10",
+		"prettier-plugin-packagejson": "^2.2.8",
+		"prettier-plugin-tailwind": "^2.2.8",
+		"prettier-plugin-toml": "0.3.1",
+		"stylelint": "^13.8.0",
+		"stylelint-config-standard": "^20.0.0",
 		"tailwindcss": "^2.0.2"
 	},
 	"scripts": {
@@ -47,11 +52,27 @@
 		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
 		"build:hugo": "hugo --gc --minify",
-		"clean": "rm -rf public"
+		"format:check": "prettier --check .",
+		"format:fix": "prettier ."
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": ""
 		}
+	},
+	"prettier": {
+		"printWidth": 120,
+		"useTabs": true,
+		"twUnknownClassesPosition": "end",
+		"overrides": [
+			{
+				"files": [
+					"*.html"
+				],
+				"options": {
+					"parser": "go-template"
+				}
+			}
+		]
 	}
 }

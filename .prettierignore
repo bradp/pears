@@ -1,2 +1,3 @@
-assets/css/build.css
 public/
+layouts/_default/_markup/*
+assets/css/build.css
