@@ -1,7 +1,7 @@
 # 🍐 Pears - A Hugo Starter Kit 🍐
 
 <p align="center">
-  <img src="https://brrad.com/readme/dance.jpg" alt="starter logo" width="360"><br>
+  <img src="https://brrad.com/readme/dance.jpg" alt="starter logo"><br>
     <br>
     <strong>A starter kit for building static sites quickly, easily, and efficiently.</strong>
   <br>
