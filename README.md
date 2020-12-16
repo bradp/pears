@@ -23,7 +23,7 @@
 
 There are a few [Hugo](https://gohugo.io) starter kits available. None of them fit what I was looking for. I decided to make my own starter kit, filled with the things I used to quickly build static sites. This isn't a theme you add to a Hugo setup and extend, it's a toolbox for you to modify to your exact needs.
 
-:warning: Currently, Pears is in a **very very early** state of development. :warning: Things will break and change. All contributions are welcome to get to a stable release.
+:warning: Currently, Pears is in a **very very early** state of development. Things will break and change. All contributions are welcome to get to a stable release.
 
 ## 🏆 Goals
 
