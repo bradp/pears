@@ -61,4 +61,4 @@ jobs:
             ${{ runner.os }}-hugomod-
 
       - name: Build Hugo
-        run: yarn run build:prod
+        run: yarn run build:hugo
