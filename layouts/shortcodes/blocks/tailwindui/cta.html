@@ -1,0 +1,34 @@
+<div class="bg-gray-50">
+	<div class="mx-auto px-4 py-12 max-w-7xl sm:px-6 lg:flex lg:items-center lg:justify-between lg:px-8 lg:py-16">
+		<h2 class="text-gray-900 text-3xl font-extrabold tracking-tight sm:text-4xl">
+			{{ if .Get "title" }}
+				<span class="block">{{ .Get "title" }}</span>
+			{{ end }}
+			{{ if .Get "subtitle" }}
+				<span class="block text-indigo-600">{{ .Get "subtitle" }}</span>
+			{{ end }}
+		</h2>
+		<div class="mt-8 lg:flex-shrink-0 lg:mt-0 lex">
+			{{ if .Get "primary" }}
+				<div class="inline-flex rounded-md shadow">
+					<a
+						href="{{ if .Get "primary-url" }}{{ .Get "primary-url" }}{{ else }}#{{ end }}"
+						class="inline-flex items-center justify-center px-5 py-3 text-white text-base font-medium bg-indigo-600 hover:bg-indigo-700 border border-transparent rounded-md"
+					>
+						{{ .Get "primary" }}
+					</a>
+				</div>
+			{{ end }}
+			{{ if .Get "secondary" }}
+				<div class="inline-flex ml-3 rounded-md shadow">
+					<a
+						href="{{ if .Get "secondary-url" }}{{ .Get "secondary-url" }}{{ else }}#{{ end }}"
+						class="inline-flex items-center justify-center px-5 py-3 text-indigo-600 text-base font-medium hover:bg-indigo-50 bg-white border border-transparent rounded-md"
+					>
+						{{ .Get "secondary" }}
+					</a>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</div>

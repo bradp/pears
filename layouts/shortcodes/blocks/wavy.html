@@ -1,0 +1,19 @@
+<section class="my-6 w-full rounded-lg wavy-bg">
+	<div class="mx-auto px-4 py-20 w-full text-center md:w-3/4 lg:w-2/4">
+		{{ if .Get "h1" }}
+			<h1
+				class="mb-6 text-3xl font-extrabold tracking-tight md:mb-6 md:leading-tight {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-purple-700{{ end }}"
+			>
+				{{ .Get "h1" }}
+			</h1>
+		{{ end }}
+
+		{{ if .Get "h2" }}
+			<h2
+				class="mb-2 font-semibold {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-purple-700{{ end }} text-md"
+			>
+				{{ .Get "h1" }}
+			</h2>
+		{{ end }}
+	</div>
+</section>
