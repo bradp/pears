@@ -29,7 +29,9 @@
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^4.1.10",
+		"eslint": "^7.15.0",
 		"husky": "^4.3.6",
+		"lint-staged": "^10.5.3",
 		"live-server": "^1.2.1",
 		"opener": "^1.5.2",
 		"postcss": "^8.2.1",
@@ -53,12 +55,42 @@
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
 		"build:hugo": "hugo --gc --minify",
 		"format:check": "prettier --check .",
-		"format:fix": "prettier ."
+		"format": "prettier .",
+		"lint": "yarn run lint:css",
+		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
+		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": ""
+			"pre-commit": "lint-staged"
 		}
+	},
+	"lint-staged": {
+		"**/*.{css,html,js,json,md,toml}": [
+			"prettier --write"
+		]
+	},
+	"stylelint": {
+		"extends": "stylelint-config-standard",
+		"rules": {
+			"at-rule-no-unknown": null,
+			"at-rule-no-vendor-prefix": true,
+			"color-hex-length": "long",
+			"media-feature-name-no-vendor-prefix": true,
+			"property-no-vendor-prefix": true,
+			"selector-no-vendor-prefix": true,
+			"value-no-vendor-prefix": true,
+			"font-family-name-quotes": "always-where-required",
+			"function-url-quotes": "always",
+			"function-url-scheme-allowed-list": [
+				"data",
+				"/^http/"
+			]
+		},
+		"ignoreFiles": [
+			"public/",
+			"assets/css/build.css"
+		]
 	},
 	"prettier": {
 		"printWidth": 120,
