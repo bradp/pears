@@ -1,4 +1,4 @@
-# 🍐 Pears - A Hugo Starter Kit 🍐
+# Pears - A Hugo Starter Kit
 
 <p align="center">
   <img src="https://brrad.com/readme/dance.jpg" alt="starter logo"><br>
