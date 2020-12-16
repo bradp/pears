@@ -25,18 +25,24 @@
 		"url": "https://bradparbs.com"
 	},
 	"scripts": {
-		"build": "yarn build:css",
+		"build": "yarn run build:css && yarn run build:hugo",
 		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
+		"build:css:dev": "yarn run build:css",
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
-		"build:hugo": "hugo --gc --minify",
-		"build:prod": "yarn build:css:prod && build:hugo",
-		"format": "yarn prettier --write .",
-		"format:check": "yarn prettier --check .",
-		"postinstall": "yarn husky install",
-		"lint": "yarn lint:css",
+		"build:dev": "yarn run build",
+		"build:hugo": "hugo",
+		"build:hugo:dev": "build:hugo",
+		"build:hugo:prod": "hugo --gc --minify",
+		"build:prod": "yarn run build:css:prod && yarn run build:hugo:prod",
+		"format": "yarn run format:fix",
+		"format:check": "yarn run prettier --check .",
+		"format:fix": "yarn run prettier --write .",
+		"postinstall": "yarn run husky install",
+		"lint": "yarn run lint:css",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
-		"start": "yarn build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313"
+		"lint:fix": "yarn run lint:css:fix",
+		"start": "yarn run build && opener http://localhost:1313 && hugo server --buildDrafts --port 1313"
 	},
 	"lint-staged": {
 		"*.css": [
