@@ -3,3 +3,5 @@ layouts/_default/_markup/*
 assets/css/build.css
 content/*.html
 content/**/*.html
+hugo_stats.json
+resources/_gen
