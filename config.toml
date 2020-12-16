@@ -2,6 +2,11 @@
 title = "starter"
 description = "This is a description!"
 baseURL = "https://example.com/"
+[params]
+	# Used for Open Graph tags & Twitter card tags.
+	title = "starter"
+    description = "This is used in og tags"
+    images = ["images/share-image.png"]
 
 # Language
 languageCode = "en-us"
