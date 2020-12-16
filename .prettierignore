@@ -1,3 +1,5 @@
 public/
 layouts/_default/_markup/*
 assets/css/build.css
+content/*.html
+content/**/*.html
