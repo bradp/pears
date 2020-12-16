@@ -57,8 +57,7 @@ Most of the included scripts and commands present are reliant on [Yarn](https://
 All you need to do is clone the project and install the dependencies.
 
 ```sh
-git clone https://github.com/bradp/pears
-yarn install
+git clone https://github.com/bradp/pears && yarn install
 ```
 
 ## ⚡️ Usage
