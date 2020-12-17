@@ -31,7 +31,7 @@
 		"build:hugo": "hugo --gc --environment development",
 		"build:hugo:prod": "hugo --gc --minify --environment production",
 		"build:prod": "yarn run build:css:prod && yarn run build:hugo:prod",
-		"format": "yarn run format:fix",
+		"format": "yarn run prettier --write .",
 		"format:check": "yarn run prettier --check .",
 		"postinstall": "yarn run husky install",
 		"lint": "yarn run lint:css && yarn run lint:js",

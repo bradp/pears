@@ -1,5 +1,5 @@
- /* global require process module */
- const cssnano = require("cssnano");
+/* global require process module */
+const cssnano = require("cssnano");
 const purgecss = require("@fullhuman/postcss-purgecss")({
 	content: ["./layouts/*.html", "./layouts/*.html", "./layouts/**/*.html"],
 	defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
