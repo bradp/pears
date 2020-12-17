@@ -1,7 +1,7 @@
 # Site Details
 title = "starter"
 description = "This is a description!"
-baseURL = "https://example.com/"
+baseURL = "localhost/"
 
 [params]
 # Used for Open Graph tags & Twitter card tags.

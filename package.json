@@ -28,10 +28,8 @@
 		"build": "yarn run build:css && yarn run build:hugo",
 		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
-		"build:hugo": "hugo",
-		"build:hugo:prod": "hugo --gc --minify",
-		"build:js:": "echo 'Built'",
-		"build:js:prod": "yarn run build:js",
+		"build:hugo": "hugo --gc --environment development",
+		"build:hugo:prod": "hugo --gc --minify --environment production",
 		"build:prod": "yarn run build:css:prod && yarn run build:hugo:prod",
 		"format": "yarn run format:fix",
 		"format:check": "yarn run prettier --check .",
@@ -55,6 +53,17 @@
 			"prettier --write"
 		]
 	},
+	"babel": {
+		"plugins": [],
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"browserslist": [
+		"last 2 versions",
+		"not ie <= 11",
+		"not dead"
+	],
 	"prettier": {
 		"printWidth": 120,
 		"twUnknownClassesPosition": "end",
@@ -113,6 +122,8 @@
 		]
 	},
 	"dependencies": {
+		"@babel/cli": "^7.12.10",
+		"@babel/core": "^7.12.10",
 		"@tailwindcss/forms": "^0.2.1",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
