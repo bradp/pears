@@ -1,7 +1,7 @@
 # Site Details
 title = "starter"
 description = "This is a description!"
-baseURL = "pears.cloud/"
+baseURL = "https://pears.cloud" # todo change back 
 
 [params]
 # Used for Open Graph tags & Twitter card tags.
