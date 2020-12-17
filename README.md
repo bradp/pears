@@ -1,7 +1,7 @@
 # Pears - A Hugo Starter Kit
 
 <p align="center">
-  <img src="https://brrad.com/readme/dance.jpg" alt="starter logo"><br>
+  <img src="https://brrad.com/readme/pears.jpg" height="300" alt="illustration of pears"><br>
     <br>
     <strong>A starter kit for building static sites quickly, easily, and efficiently.</strong>
   <br>
@@ -62,9 +62,9 @@ git clone https://github.com/bradp/pears && yarn install
 
 ## ⚡️ Usage
 
-There are a variety of commands available to help your development.
+There are a variety of useful commands available to help your development.
 
-The commands mostly follow the format of `command : component : enviroment`.
+The one you will use most of the time is `yarn start`. This starts up your local development server after building the files needed.
 
 You can also run `yarn run` to see a full list of commands.
 
@@ -84,7 +84,7 @@ You can also run `yarn run` to see a full list of commands.
 
 |       Command       | Action                           |
 | :-----------------: | :------------------------------- |
-|  `yarn build:css:`  | Build just the CSS               |
+|  `yarn build:css`   | Build just the CSS               |
 |  `yarn build:hugo`  | Build Hugo files                 |
 |   `yarn lint:fix`   | Fix linting errors automatically |
 | `yarn format:check` | Check formatting errors          |
