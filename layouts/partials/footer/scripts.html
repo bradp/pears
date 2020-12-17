@@ -1,0 +1,11 @@
+{{ $js := resources.Get "js/main.js" | babel }}
+{{ $instant_page := resources.Get "js/vendor/instantpage.js" }}
+{{ $js := slice $instant_page $js | resources.Concat "assets/js/app.js" }}
+
+{{ if eq (hugo.Environment) "development" }}
+	<script src="{{ $js.Permalink }}" defer></script>
+	{{ else }}
+	{{- $js := $js | minify -}}
+	{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+	<script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>¨
+{{ end }}
