@@ -40,3 +40,6 @@ writeStats = true
 
 [social]
 twitter = "username"
+
+[Author]
+name = "Brad Parbs"
