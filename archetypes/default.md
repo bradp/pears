@@ -3,13 +3,13 @@ draft: true
 
 title: ""
 description: ""
-date: {{ .Date }}
+date: { { .Date } }
 images:
-	- featured-image.png
+  - featured-image.png
 categories:
-	- example
-	- example2
-  tags:
-	- tag1
-	- tag2
+  - example
+  - example2
+tags:
+  - tag1
+  - tag2
 ---

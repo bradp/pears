@@ -24,7 +24,7 @@ enableInlineShortcodes = true
 summaryLength = 40
 
 [permalinks]
-posts = "/:year/:month/:title/"
+posts = "/blog/:year/:month/:title/"
 
 [imaging]
 resampleFilter = 'Lanczos'
@@ -43,3 +43,14 @@ twitter = "bradparbs"
 
 [Author]
 name = "Brad Parbs"
+
+[memu]
+
+[[menu.main]]
+name = "Test"
+url = "#"
+weight = 100
+
+[[menu.main]]
+name = "Login"
+url = "#login"

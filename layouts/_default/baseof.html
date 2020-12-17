@@ -5,25 +5,18 @@
 			{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}
 		</title>
 
-		{{ partial "head/metadata.html" . }}
-		{{ partial "head/favicons.html" . }}
+		{{ partialCached "head/metadata.html" . }}
+		{{ partialCached "head/favicons.html" . }}
 		{{ partial "head/styles.html" . }}
 	</head>
 
-	<body class="relative min-h-screen bg-gray-100">
+	<body>
 		<div id="top"></div>
 		{{- partial "header/header.html" . -}}
 
-		{{ $mainClass := "text-xl leading-loose font-light subpixel-antialiased" }}
-		{{ if .IsHome }}
-			{{ $mainClass = "lg:max-w-5xl xl:max-w-6xl 2xl:max-w-screen-xl" }}
-		{{ end }}
+		<main>{{- block "main" . }}{{- end }}</main>
 
-		<main class="mx-auto pt-8 px-4 w-full overflow-x-hidden md:max-w-4xl md:overflow-visible {{ $mainClass }}">
-			{{- block "main" . }}{{- end }}
-		</main>
-
-		{{- partial "footer/footer.html" . -}}
+		{{- partialCached "footer/footer.html" . -}}
 		{{- partial "footer/scripts.html" . -}}
 	</body>
 </html>

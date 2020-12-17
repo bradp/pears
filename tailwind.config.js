@@ -1,17 +1,26 @@
+/* global require module process */
 const colors = require("tailwindcss/colors");
 
 module.exports = {
 	purge: {
-		mode: "all",
-		preserveHtmlElements: false,
-		content: ["./public/*.html"],
+		enabled: process.env.HUGO_ENVIRONMENT === 'production',
+		content: [ './hugo_stats.json' ],
+		mode: 'all',
+		options: {
+			//whitelist: [ 'pl-1', 'pl-3' ],
+			defaultExtractor: (content) => {
+				let els = JSON.parse(content).htmlElements;
+				els = els.tags.concat(els.classes, els.ids);
+				return els;
+			}
+		}
 	},
 	darkMode: false,
 	theme: {
 		colors: {
 			primary: "#fec7d7",
-			secondary: "#d9d4e7",
-			tertiary: "#a786df",
+			secondary: "#a786df",
+			tertiary: "#d9d4e7",
 			transparent: "transparent",
 			black: "#000",
 			white: "#fff",
