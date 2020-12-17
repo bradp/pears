@@ -29,6 +29,9 @@
 		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
 		"build:css:dev": "yarn run build:css",
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
+		"build:js:": "",
+		"build:js:dev": "yarn run build:js",
+		"build:js:prod": "",
 		"build:dev": "yarn run build",
 		"build:hugo": "hugo",
 		"build:hugo:dev": "build:hugo",
@@ -38,17 +41,22 @@
 		"format:check": "yarn run prettier --check .",
 		"format:fix": "yarn run prettier --write .",
 		"postinstall": "yarn run husky install",
-		"lint": "yarn run lint:css",
+		"lint": "yarn run lint:css && yarn run lint:js",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
-		"lint:fix": "yarn run lint:css:fix",
+		"lint:js": "eslint assets/js/*.js",
+		"lint:js:fix": "eslint assets/js/*.js --fix",
+		"lint:fix": "yarn run lint:css:fix && yarn run lint:js:fix",
 		"start": "yarn run build && opener http://localhost:53214 && hugo server --buildDrafts --port 53214"
 	},
 	"lint-staged": {
 		"*.css": [
 			"stylelint"
 		],
-		"*.{css,html,js,json,md,toml}": [
+		"*.js": [
+			"eslint"
+		],
+		"*.{css,html,json,md,toml}": [
 			"prettier --write"
 		]
 	},
@@ -97,12 +105,26 @@
 			"assets/css/build.css"
 		]
 	},
+	"eslintConfig": {
+		"env": {
+			"browser": true,
+			"es2021": true
+		},
+		"extends": "eslint:recommended",
+		"parserOptions": {
+			"ecmaVersion": 12,
+			"sourceType": "module"
+		},
+		"rules": {}
+	},
 	"dependencies": {
 		"@tailwindcss/forms": "^0.2.1",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^4.1.10",
 		"eslint": "^7.15.0",
+		"eslint-config-prettier": "^7.0.0",
+		"eslint-config-standard": "^16.0.2",
 		"husky": "^5.0.6",
 		"lint-staged": "^10.5.3",
 		"live-server": "^1.2.1",

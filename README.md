@@ -34,13 +34,16 @@ There are a few [Hugo](https://gohugo.io) starter kits available. None of them f
 
 ## 🎉️ What's included?
 
-- **🚧 [Hugo](https://gohugo.io)** - The fastest framework for building static sites
+  🚧&nbsp;&nbsp; **[Hugo](https://gohugo.io)** - The fastest framework for building static sites
 
-- **🎨 [TailwindCSS](https://tailwind.css)**, **[Tailwind Forms](https://github.com/tailwindlabs/tailwindcss-forms)**, and **[Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography)** Utility-first CSS framework to build your site without ever having to leave your HTML.
+  🎨&nbsp;&nbsp; **[TailwindCSS](https://tailwind.css)**, **[Tailwind Forms](https://github.com/tailwindlabs/tailwindcss-forms)**, and **[Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography)** Utility-first CSS framework to build your site without ever having to leave your HTML.
 
-- **🔧️ [PostCSS](https://github.com/postcss/postcss)**, **[autoprefixer](https://github.com/postcss/autoprefixer)**, and **[PurgeCSS](https://github.com/FullHuman/purgecss)** Trim your CSS files (including Tailwind's) to be _only_ the classes and rules you actually use in your markup.
+  🔧️&nbsp;&nbsp; **[PostCSS](https://github.com/postcss/postcss)**, **[autoprefixer](https://github.com/postcss/autoprefixer)**, and **[PurgeCSS](https://github.com/FullHuman/purgecss)** Trim your CSS files (including Tailwind's) to be _only_ the classes and rules you actually use in your markup.
 
-- **🌈️ [Prettier](https://github.com/prettier/prettier)** and **[stylelint](https://github.com/stylelint/stylelint)** Write better code without having to think about formatting.
+  🌈️ &nbsp;&nbsp;**[Prettier](https://github.com/prettier/prettier)** and **[stylelint](https://github.com/stylelint/stylelint)** Write better code without having to think about formatting.
+
+  🔍️ &nbsp;&nbsp;**[ESLint](https://eslint.org)** Never run into JS errors again.
+
 
 ## 🚀️ Getting Started
 
@@ -54,49 +57,42 @@ Most of the included scripts and commands present are reliant on [Yarn](https://
 
 ### Installing
 
-All you need to do is clone the project and install the dependencies.
+Once you have Yarn and Hugo installed on your system, all you need to do is grab a copy of Pears and install the dependencies.
 
-```sh
-git clone https://github.com/bradp/pears && yarn install
+```
+git clone https://github.com/bradp/pears && yarn
 ```
 
 ## ⚡️ Usage
 
-There are a variety of useful commands available to help your development.
-
-The one you will use most of the time is `yarn start`. This starts up your local development server after building the files needed.
-
-You can also run `yarn run` to see a full list of commands.
+ - To start up your local development environment: `yarn start`
+ - To see a full list of available commands: `yarn run`
 
 #### Main Commands
+Command | Action
+:- | :-
+`yarn start` | Builds all files & starts up the development server
+`yarn build` | Builds all files for a local or staging environment
+`yarn build:prod` | Builds all files for a deployment to a production server
+`yarn lint` | Check your CSS & JS files for errors Append `:fix` to automatically fix
+`yarn format` | Fix formatting errors automatically
 
-|      Command      | Action                                                   |
-| :---------------: | :------------------------------------------------------- |
-|   `yarn start`    | Builds all files & starts up the development server      |
-|   `yarn build`    | Builds all files for a local or staging environment      |
-| `yarn build:prod` | Builds all files for a deployment to a production server |
-|    `yarn lint`    | Check your CSS & JS\* files for errors                   |
-|   `yarn format`   | Fix formatting errors automatically                      |
+#### Processing & Building
+Command | Action
+:- | :-
+`yarn build:css` | Build CSS files
+`yarn build:js` | Build JS files
+`yarn build:hugo` | Build Hugo files
 
-<small>_JS linting & formatting is coming soon._</small>
+#### Linting & Formatting
+Command | Action
+:- | :-
+`yarn lint:css` | Lint CSS files Append `:fix` to automatically fix
+`yarn lint:js` | Lint JS files. Append `:fix` to automatically fix
+`yarn format:check` | Check formatting errors without automatically fixing
 
-#### Development
+<small>Remember, you can always check <code>yarn run</code> to see  full list of commands!</small>
 
-|       Command       | Action                           |
-| :-----------------: | :------------------------------- |
-|  `yarn build:css`   | Build just the CSS               |
-|  `yarn build:hugo`  | Build Hugo files                 |
-|   `yarn lint:fix`   | Fix linting errors automatically |
-| `yarn format:check` | Check formatting errors          |
-
-#### Production
-
-|        Command         | Action                                       |
-| :--------------------: | :------------------------------------------- |
-| `yarn build:css:prod`  | Build just the CSS for production deployment |
-| `yarn build:hugo:prod` | Build Hugo for production deployment         |
-
-<small>All `build` commands support prepending `:dev` or `:prod` at the end. More environments may be available in the future.</small>
 
 ## 🔮️ Roadmap
 
