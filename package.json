@@ -53,17 +53,6 @@
 			"prettier --write"
 		]
 	},
-	"babel": {
-		"plugins": [],
-		"presets": [
-			"@babel/preset-env"
-		]
-	},
-	"browserslist": [
-		"last 2 versions",
-		"not ie <= 11",
-		"not dead"
-	],
 	"prettier": {
 		"printWidth": 120,
 		"twUnknownClassesPosition": "end",
@@ -125,7 +114,6 @@
 		"@babel/cli": "^7.12.10",
 		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.12.11",
-		"@babel/register": "^7.12.10",
 		"@tailwindcss/forms": "^0.2.1",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
