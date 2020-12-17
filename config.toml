@@ -1,12 +1,12 @@
 # Site Details
-title = "starter"
+title = "Pears"
 description = "This is a description!"
 baseURL = "/"
 
 [params]
 # Used for Open Graph tags & Twitter card tags.
-title = "starter"
-description = "This is used in og tags"
+title = "🍐️ Pears "
+description = " A starter kit for building static sites quickly, easily, and efficiently."
 images = ["images/share-image.png"]
 # Language
 languageCode = "en-us"
@@ -39,7 +39,7 @@ disableLatLong = true
 writeStats = true
 
 [social]
-twitter = "username"
+twitter = "bradparbs"
 
 [Author]
 name = "Brad Parbs"
