@@ -5,3 +5,4 @@ content/*.html
 content/**/*.html
 hugo_stats.json
 resources/_gen
+README.md
