@@ -34,7 +34,7 @@
 		"clean": "rimraf public",
 		"format": "yarn run prettier --write .",
 		"format:check": "yarn run prettier --check .",
-		"postinstall": "yarn run husky install",
+		"postinstall": "yarn run husky install && build:css && build:hugo",
 		"lint": "yarn run lint:css && yarn run lint:js",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
