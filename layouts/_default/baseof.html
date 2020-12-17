@@ -7,7 +7,7 @@
 
 		{{ partialCached "head/metadata.html" . }}
 		{{ partialCached "head/favicons.html" . }}
-		{{ partial "head/styles.html" . }}
+		{{ partialCached "head/styles.html" . }}
 	</head>
 
 	<body>
@@ -17,6 +17,6 @@
 		<main>{{- block "main" . }}{{- end }}</main>
 
 		{{- partialCached "footer/footer.html" . -}}
-		{{- partial "footer/scripts.html" . -}}
+		{{- partialCached "footer/scripts.html" . -}}
 	</body>
 </html>

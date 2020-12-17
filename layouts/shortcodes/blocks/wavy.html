@@ -1,13 +1,13 @@
 <section class="my-6 w-full rounded-lg {{ if .Get "bg-color" }}bg-{{ .Get "bg-color" }}{{ else }}bg-secondary{{ end }}">
 	<div class="mx-auto px-4 py-20 w-full text-center md:w-3/4 lg:w-2/4">
 		{{ if .Get "h1" }}
-			<h1 class="mb-6 {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-primary{{ end }}">
+			<h1 class="mb-6 {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-primaryDark{{ end }}">
 				{{ .Get "h1" }}
 			</h1>
 		{{ end }}
 
 		{{ if .Get "h2" }}
-			<h2 class="mb-2 {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-primary{{ end }} text-md">
+			<h2 class="mb-2 {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-primaryDark{{ end }} text-md">
 				{{ .Get "h2" }}
 			</h2>
 		{{ end }}

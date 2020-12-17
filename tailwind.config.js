@@ -3,23 +3,25 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
 	purge: {
-		enabled: process.env.HUGO_ENVIRONMENT === 'production',
-		content: [ './hugo_stats.json' ],
-		mode: 'all',
+		enabled: process.env.HUGO_ENVIRONMENT === "production",
+		content: ["./hugo_stats.json"],
+		mode: "all",
 		options: {
 			//whitelist: [ 'pl-1', 'pl-3' ],
 			defaultExtractor: (content) => {
 				let els = JSON.parse(content).htmlElements;
 				els = els.tags.concat(els.classes, els.ids);
 				return els;
-			}
-		}
+			},
+		},
 	},
 	darkMode: false,
 	theme: {
 		colors: {
-			primary: "#fec7d7",
-			secondary: "#a786df",
+			primary: "#9679c9",
+			primaryDark: "#645086",
+			secondary: "#e486c0",
+			secondaryDark: "#da5daa",
 			tertiary: "#d9d4e7",
 			transparent: "transparent",
 			black: "#000",
@@ -106,18 +108,18 @@ module.exports = {
 				900: "#52426d",
 			},
 			pink: {
-				DEFAULT: "#fec7d7",
-				50: "#fffcfd",
-				100: "#fff9fb",
-				200: "#fff1f5",
-				300: "#ffe9ef",
-				400: "#fed8e3",
-				500: "#fec7d7",
-				600: "#e5b3c2",
-				700: "#bf95a1",
-				800: "#987781",
-				900: "#7c6269",
-			},
+				DEFAULT: '#d13394',
+				50: '#fbeef6',
+				100: '#f7daeb',
+				200: '#edb0d6',
+				300: '#e486c0',
+				400: '#da5daa',
+				500: '#d13394',
+				600: '#aa2778',
+				700: '#811d5b',
+				800: '#57143d',
+				900: '#2e0a20'
+			}
 		},
 	},
 	variants: {

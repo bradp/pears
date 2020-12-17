@@ -28,9 +28,10 @@
 		"build": "yarn run build:css && yarn run build:hugo",
 		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
 		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
-		"build:hugo": "hugo --gc --environment development",
-		"build:hugo:prod": "hugo --gc --minify --environment production",
+		"build:hugo": "yarn run clean && hugo --gc --environment development",
+		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
 		"build:prod": "yarn run build:css:prod && yarn run build:hugo:prod",
+		"clean": "rimraf public",
 		"format": "yarn run prettier --write .",
 		"format:check": "yarn run prettier --check .",
 		"postinstall": "yarn run husky install",
@@ -109,6 +110,9 @@
 			"public/",
 			"assets/css/build.css"
 		]
+	},
+	"dependencies": {
+		"rimraf": "^3.0.2"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.12.10",
