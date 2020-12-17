@@ -60,7 +60,9 @@ Most of the included scripts and commands present are reliant on [Yarn](https://
 Once you have Yarn and Hugo installed on your system, all you need to do is grab a copy of Pears and install the dependencies.
 
 ```
-git clone https://github.com/bradp/pears && yarn
+git clone https://github.com/bradp/pears <your-new-site-name>
+cd <your-new-site-name>
+yarn
 ```
 
 ## ⚡️ Usage
