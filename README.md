@@ -14,14 +14,11 @@
    <!--<a href="">View live demo →</a>-->
 </p>
 
-## 🍐 About Pears
 
 <p align="center">
   <img src="https://brrad.com/readme/dog.jpg" alt="this is going to be a screen shot" width="400"><br>
   <em>once version 1 is ready, that dog will be a screenshot of a sample site. But for now enjoy that fancy pup.</em>
 </p>
-
-There are a few [Hugo](https://gohugo.io) starter kits available. None of them fit what I was looking for. I decided to make my own starter kit, filled with the things I used to quickly build static sites. This isn't a theme you add to a Hugo setup and extend, it's a toolbox for you to modify to your exact needs.
 
 :warning: Currently, Pears is in a **very very early** state of development. Things will break and change. All contributions are welcome to get to a stable release.
 
