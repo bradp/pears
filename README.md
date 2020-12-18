@@ -79,8 +79,6 @@ Command | Action
 #### Building & Linting
 Command | Action
 :- | :-
-`yarn build:css` | Build CSS files
-`yarn build:hugo` | Build Hugo files
 `yarn lint:css` | Lint CSS files Append `:fix` to automatically fix
 `yarn lint:js` | Lint JS files. Append `:fix` to automatically fix
 `yarn format:check` | Check formatting errors without automatically fixing

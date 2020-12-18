@@ -1,5 +1,5 @@
 {
-	"name": "starter",
+	"name": "pears",
 	"version": "1.0.0",
 	"description": "A starting point for a Hugo + TailwindCSS powered static site.",
 	"keywords": [
@@ -12,11 +12,11 @@
 		"starter",
 		"boilerplate"
 	],
-	"homepage": "https://github.com/bradp/starter",
-	"bugs": "https://github.com/bradp/starter/issues",
+	"homepage": "https://github.com/bradp/pears",
+	"bugs": "https://github.com/bradp/pears/issues",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bradp/starter.git"
+		"url": "https://github.com/bradp/pears.git"
 	},
 	"license": "MIT",
 	"author": {
@@ -25,16 +25,13 @@
 		"url": "https://bradparbs.com"
 	},
 	"scripts": {
-		"build": "yarn run build:css && yarn run build:hugo",
-		"build:css": "NODE_ENV=development postcss assets/css/main.css -o assets/css/build.css",
-		"build:css:prod": "NODE_ENV=production postcss assets/css/main.css -o assets/css/build.css",
+		"build": "build:hugo",
 		"build:hugo": "yarn run clean && hugo --gc --environment development",
 		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
-		"build:prod": "yarn run build:css:prod && yarn run build:hugo:prod",
 		"clean": "rimraf public",
 		"format": "yarn run prettier --write .",
 		"format:check": "yarn run prettier --check .",
-		"postinstall": "yarn run husky install && yarn run build:css && yarn run build:hugo",
+		"postinstall": "yarn run husky install yarn run build:hugo",
 		"lint": "yarn run lint:css && yarn run lint:js",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
