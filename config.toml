@@ -54,3 +54,8 @@ weight = 100
 [[menu.main]]
 name = "Login"
 url = "#login"
+
+[module]
+
+[[module.imports]]
+path = "github.com/bradp/hugo-jam-icons"
