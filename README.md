@@ -13,10 +13,7 @@
     <br>
     <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bradp/pears">
       <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
-    </a>
-    <br>
-    <br>
-   <a href="https://pears.cloud/">View live demo →</a>
+    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://pears.cloud/">View live demo →</a>
 </p>
 
 
