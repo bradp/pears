@@ -1,7 +1,7 @@
 # Site Details
 title = "Pears"
 description = "This is a description!"
-baseURL = "/"
+baseURL = "https://pears.cloud/"
 
 [params]
 # Used for Open Graph tags & Twitter card tags.
