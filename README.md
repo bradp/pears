@@ -20,7 +20,7 @@
   <em>once version 1 is ready, that dog will be a screenshot of a sample site. But for now enjoy that fancy pup.</em>
 </p>
 
-:warning: Currently, Pears is in a **very very early** state of development. Things will break and change. All contributions are welcome to get to a stable release.
+:warning: Currently, Pears is in an **early** state of development. Things may break & change.
 
 ## 🏆 Goals
 
