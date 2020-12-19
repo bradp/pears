@@ -1,5 +1,5 @@
 ---
-title: "test"
+title: "Test Blog Post"
 description: "this a test"
 date: 2020-12-17T10:51:27-06:00
 images:
