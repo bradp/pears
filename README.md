@@ -13,13 +13,10 @@
     <br>
     <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bradp/pears">
       <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
-    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://pears.cloud/">View live demo →</a>
-</p>
-
-
-<p align="center">
-  <img src="https://brrad.com/readme/dog.jpg" alt="this is going to be a screen shot" width="400"><br>
-  <em>once version 1 is ready, that dog will be a screenshot of a sample site. But for now enjoy that fancy pup.</em>
+    </a>
+    <br>
+    <br>
+   <a href="https://pears.cloud/">View live demo →</a>
 </p>
 
 :warning: Currently, Pears is in an **early** state of development. Things may break & change.
