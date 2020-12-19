@@ -49,9 +49,6 @@ jobs:
       - name: Lint CSS
         run: yarn run lint:css
 
-      - name: Build production CSS
-        run: yarn run build:css:prod
-
       - name: Cache Hugo dependencies
         uses: actions/cache@v2
         with:
@@ -61,4 +58,4 @@ jobs:
             ${{ runner.os }}-hugomod-
 
       - name: Build Hugo
-        run: yarn run build:hugo
+        run: yarn run build:hugo:prod
