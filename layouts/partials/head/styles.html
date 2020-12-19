@@ -1,5 +1,5 @@
-{{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "postcss.config.js") }}
-{{ $styles := slice $styles | resources.Concat "assets/css/main.css" }}
+{{- $styles := resources.Get "css/main.css" | postCSS (dict "config" "postcss.config.js") -}}
+{{- $styles := slice $styles | resources.Concat "assets/css/main.css" -}}
 
 {{ if eq (hugo.Environment) "development" }}
 	<link rel="stylesheet" href="{{ $styles.Permalink }}" />

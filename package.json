@@ -38,7 +38,7 @@
 		"lint:fix": "yarn run lint:css:fix && yarn run lint:js:fix",
 		"lint:js": "eslint assets/js/*.js",
 		"lint:js:fix": "eslint assets/js/*.js --fix",
-		"start": "yarn run build && hugo server --buildDrafts"
+		"start": "yarn run build:hugo && hugo server --buildDrafts"
 	},
 	"lint-staged": {
 		"*.css": [

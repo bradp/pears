@@ -1,4 +1,4 @@
-<header class="text-gray-700 bg-white">
+<header class="text-gray-700 bg-white shadow">
 	<div class="container flex flex-col flex-wrap items-center mx-auto p-5 md:flex-row main-width">
 		{{- partialCached "component/logo.html" . -}}
 
@@ -9,7 +9,7 @@
 					class="mr-5 hover:text-gray-600 hover:underline {{ if $page.HasMenuCurrent "main" . }}bg-primary{{ end }}"
 				>
 					{{- .Pre -}}<a href="{{ .URL | absURL | safeURL }}" title="{{ .Name | safeHTML }}"
-						>{{ .Name | emojify | safeHTML }}</a
+						>{{- .Name | emojify | safeHTML -}}</a
 					>{{- .Post -}}
 				</li>
 			{{ end }}

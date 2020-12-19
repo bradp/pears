@@ -1,0 +1,16 @@
+{{ define "main" }}
+	{{ .Content }}
+	<section id="example" class="mx-auto w-full max-w-sm text-gray-700 body-font">
+		<div class="order-1 px-2 max-w-md text-sm md:text-base lg:px-0">
+			<header class="mb-6">
+				<h2 class="text-gray-400 text-4xl font-bold leading-none select-none lg:text-6xl">404.</h2>
+				<h3 class="text-xl font-light leading-normal md:text-3xl lg:text-3xl">We couldn't find this page.</h3>
+			</header>
+			<button
+				class="inline px-4 py-2 text-white text-sm font-medium leading-5 hover:bg-purple-200 bg-purple-400 border border-transparent rounded-lg"
+			>
+				Back to Homepage
+			</button>
+		</div>
+	</section>
+{{ end }}

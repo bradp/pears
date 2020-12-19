@@ -47,13 +47,9 @@ name = "Brad Parbs"
 [memu]
 
 [[menu.main]]
-name = "Test"
-url = "#"
+name = "Github"
+url = "https://github.com/bradp/pears"
 weight = 100
-
-[[menu.main]]
-name = "Login"
-url = "#login"
 
 [module]
 
