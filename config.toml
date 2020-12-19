@@ -50,8 +50,3 @@ name = "Brad Parbs"
 name = "Github"
 url = "https://github.com/bradp/pears"
 weight = 100
-
-[module]
-
-[[module.imports]]
-path = "github.com/bradp/hugo-jam-icons"
