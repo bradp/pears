@@ -1,5 +1,5 @@
 ---
-title: "Markdown test"
+title: "Markdown Test"
 description: "This is a test of most elements in markdown"
 date: 2020-12-17T10:05:26-06:00
 images:
