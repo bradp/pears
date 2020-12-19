@@ -1,6 +1,6 @@
 {
 	"name": "pears",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "A starting point for a Hugo + TailwindCSS powered static site.",
 	"keywords": [
 		"hugo",
