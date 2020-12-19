@@ -10,8 +10,9 @@
     <a href="https://www.github.com/bradp/starter/releases/"><img src="https://img.shields.io/github/v/release/bradp/starter?style=flat-square" alt="Latest Release"></a>
     <img src="https://img.shields.io/github/last-commit/bradp/starter?style=flat-square" alt="Last commit">
     <br>
+    <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bradp/pears"><img src=" https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
     <br>
-   <!--<a href="">View live demo →</a>-->
+   <a href="https://pears.cloud/">View live demo →</a>
 </p>
 
 
