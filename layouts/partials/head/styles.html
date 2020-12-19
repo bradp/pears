@@ -1,9 +1,5 @@
 {{- $styles := resources.Get "css/main.css" | postCSS (dict "config" "postcss.config.js") -}}
 {{- $styles := slice $styles | resources.Concat "assets/css/main.css" -}}
+{{- $styles := $styles  | minify | fingerprint -}}
 
-{{ if eq (hugo.Environment) "development" }}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" />
-	{{ else }}
-	{{- $styles := $styles  | minify | fingerprint -}}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" />
-{{ end -}}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" />
