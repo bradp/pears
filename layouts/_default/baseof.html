@@ -5,9 +5,9 @@
 			{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}
 		</title>
 
-		{{ partialCached "head/metadata.html" . }}
-		{{ partialCached "head/favicons.html" . }}
-		{{ partialCached "head/styles.html" . }}
+		{{ partial "head/metadata.html" . }}
+		{{ partial "head/favicons.html" . }}
+		{{ partial "head/styles.html" . }}
 	</head>
 
 	<body>
@@ -16,7 +16,7 @@
 
 		<main>{{- block "main" . }}{{- end }}</main>
 
-		{{- partialCached "footer/footer.html" . -}}
-		{{- partialCached "footer/scripts.html" . -}}
+		{{- partial "footer/footer.html" . -}}
+		{{- partial "footer/scripts.html" . -}}
 	</body>
 </html>
