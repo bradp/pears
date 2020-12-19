@@ -101,7 +101,8 @@
 			"no-extra-semicolons": true,
 			"property-no-vendor-prefix": true,
 			"selector-no-vendor-prefix": true,
-			"value-no-vendor-prefix": true
+			"value-no-vendor-prefix": true,
+			"declaration-empty-line-before": null
 		},
 		"ignoreFiles": [
 			"public/",
@@ -109,9 +110,6 @@
 		]
 	},
 	"dependencies": {
-		"rimraf": "^3.0.2"
-	},
-	"devDependencies": {
 		"@babel/cli": "^7.12.10",
 		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.12.11",
@@ -135,6 +133,7 @@
 		"prettier-plugin-packagejson": "^2.2.8",
 		"prettier-plugin-tailwind": "^2.2.8",
 		"prettier-plugin-toml": "0.3.1",
+		"rimraf": "^3.0.2",
 		"stylelint": "^13.8.0",
 		"stylelint-config-standard": "^20.0.0",
 		"tailwindcss": "^2.0.2"

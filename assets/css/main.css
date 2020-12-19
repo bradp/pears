@@ -1,3 +1,5 @@
+@imports 'fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,8 @@
 @layer base {
 	body {
 		@apply relative min-h-screen bg-gray-100;
+
+		font-family: Open Sans, -apple-system, Helvetica Neue, Helvetica, sans-serif;
 	}
 
 	main {
@@ -18,13 +22,21 @@
 	}
 
 	h1 {
-		@apply text-purple-800 text-3xl font-bold tracking-tight;
+		@apply text-purple-800 text-3xl tracking-tight;
 		@apply m-0 mb-4;
 	}
 
 	h2 {
 		@apply text-xl;
 		@apply m-0 mb-4;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: Noto Sans, -apple-system, Helvetica Neue, Helvetica, sans-serif;
 	}
 }
 
