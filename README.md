@@ -1,4 +1,4 @@
-# 🍐️&nbsp;&nbsp;Pears - A Static Site Starter Kit 🍐️
+# 🍐️&nbsp;&nbsp;Pears - A Static Site Starter Kit
 
 <p align="center">
   <img src="https://brrad.com/readme/pears.jpg" height="300" alt="illustration of pears"><br>
