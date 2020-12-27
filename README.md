@@ -6,7 +6,7 @@
     <strong>A starter kit for building static sites quickly, easily, and efficiently.</strong>
   <br>
   	<br>
-    <img src="https://img.shields.io/github/workflow/status/bradp/pears/build/main?style=flat-square" alt="Build Status">
+    <img src="https://img.shields.io/github/workflow/status/bradp/pears/Hugo%20Build?style=flat-square" alt="Build Status">
     <a href="https://www.github.com/bradp/pears/releases/"><img src="https://img.shields.io/github/v/release/bradp/pears?style=flat-square" alt="Latest Release"></a>
       <img src="https://img.shields.io/github/last-commit/bradp/pears?style=flat-square" alt="Last commit">
     <br>
