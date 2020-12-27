@@ -4,13 +4,13 @@
 	<div class="mx-auto px-4 py-20 w-full text-center md:w-3/4 lg:w-2/4">
 		{{ if .Get "h1" }}
 			<h1 class="mb-6 {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-primaryDark{{ end }}">
-				{{ .Get "h1" }}
+				{{ .Get "h1" | safeHTML }}
 			</h1>
 		{{ end }}
 
 		{{ if .Get "h2" }}
 			<h2 class="mb-2 {{ if .Get "color" }}text-{{ .Get "color" }}{{ else }}text-primaryDark{{ end }} text-md">
-				{{ .Get "h2" }}
+				{{ .Get "h2" | safeHTML }}
 			</h2>
 		{{ end }}
 	</div>
