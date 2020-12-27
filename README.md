@@ -8,7 +8,7 @@
   	<br>
     <img src="https://img.shields.io/github/workflow/status/bradp/starter/build/main?style=flat-square" alt="Build Status">
     <a href="https://www.github.com/bradp/starter/releases/"><img src="https://img.shields.io/github/v/release/bradp/starter?style=flat-square" alt="Latest Release"></a>
-    <img src="https://img.shields.io/github/last-commit/bradp/starter?style=flat-square" alt="Last commit">
+      <img src="https://img.shields.io/github/last-commit/bradp/starter?style=flat-square" alt="Last commit">
     <br>
     <br>
     <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bradp/pears">
@@ -16,10 +16,12 @@
     </a>
     <br>
     <br>
-   <a href="https://pears.cloud/">View live demo →</a>
+      <a href="https://pears.cloud/">View live demo →</a>
+    <br>
+    <br>
+      :warning: Currently, Pears is in an <strong>early</strong> state of development. Things may break & change.
 </p>
 
-:warning: Currently, Pears is in an **early** state of development. Things may break & change.
 
 ## 🏆 Goals
 
