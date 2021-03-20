@@ -4,9 +4,9 @@
 		<meta charset="utf-8" />
 		<title>{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}</title>
 
-		{{ partial "head/metadata.html" . }}
-		{{ partial "head/favicons.html" . }}
-		{{ partial "head/styles.html" . }}
+		{{- partial "head/metadata.html" . -}}
+		{{- partial "head/favicons.html" . -}}
+		{{- partial "head/styles.html" . -}}
 	</head>
 
 	<body>
