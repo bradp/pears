@@ -25,7 +25,7 @@
 		"url": "https://bradparbs.com"
 	},
 	"scripts": {
-		"build": "build:hugo",
+		"build": "yarn run build:hugo",
 		"build:hugo": "yarn run clean && hugo --gc --environment development",
 		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
 		"clean": "rimraf public",
