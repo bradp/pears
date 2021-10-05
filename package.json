@@ -25,20 +25,20 @@
 		"url": "https://bradparbs.com"
 	},
 	"scripts": {
-		"build": "yarn run build:hugo",
-		"build:hugo": "yarn run clean && hugo --gc --environment development",
-		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
+		"build": "npm run build:hugo",
+		"build:hugo": "npm run clean && hugo --gc --environment development",
+		"build:hugo:prod": "npm run clean && hugo --gc --minify --environment production",
 		"clean": "rimraf public",
-		"format": "yarn run prettier --write .",
-		"format:check": "yarn run prettier --check .",
-		"postinstall": "yarn run husky install &&w yarn run build:hugo",
-		"lint": "yarn run lint:css && yarn run lint:js",
+		"format": "npm run prettier --write .",
+		"format:check": "npm run prettier --check .",
+		"postinstall": "npm run husky install &&w npm run build:hugo",
+		"lint": "npm run lint:css && npm run lint:js",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
-		"lint:fix": "yarn run lint:css:fix && yarn run lint:js:fix",
+		"lint:fix": "npm run lint:css:fix && npm run lint:js:fix",
 		"lint:js": "eslint assets/js/*.js",
 		"lint:js:fix": "eslint assets/js/*.js --fix",
-		"start": "yarn run build:hugo && hugo server --buildDrafts"
+		"start": "npm run build:hugo && hugo server --buildDrafts"
 	},
 	"lint-staged": {
 		"*.css": [
