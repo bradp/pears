@@ -1,25 +1,25 @@
 # 🍐️&nbsp;&nbsp;Pears - A Static Site Starter Kit
 
 <p align="center">
-  <img src="https://brrad.com/readme/pears.jpg" height="300" alt="illustration of pears"><br>
-    <br>
-    <strong>A starter kit for building static sites quickly, easily, and efficiently.</strong>
+  <img src="https://brrad.com/readme/pears.jpg" height="300" alt="illustration of pears">
   <br>
-  	<br>
-    <img src="https://img.shields.io/github/workflow/status/bradp/pears/Hugo%20Build?style=flat-square" alt="Build Status">
-    <a href="https://www.github.com/bradp/pears/releases/"><img src="https://img.shields.io/github/v/release/bradp/pears?style=flat-square" alt="Latest Release"></a>
-      <img src="https://img.shields.io/github/last-commit/bradp/pears?style=flat-square" alt="Last commit">
-    <br>
-    <br>
-    <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bradp/pears">
-      <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
+  <br>
+  <strong>
+    A starter kit for building static sites quickly, easily, and efficiently.
+  </strong>
+  <br>
+  <br>
+  <img src="https://img.shields.io/github/workflow/status/bradp/pears/Hugo%20Build?style=flat-square" alt="Build Status">
+    <a href="https://www.github.com/bradp/pears/releases/">
+      <img src="https://img.shields.io/github/v/release/bradp/pears?style=flat-square" alt="Latest Release">
     </a>
-    <br>
-    <br>
-      <a href="https://pears.cloud/">View live demo →</a>
-    <br>
-    <br>
-      :warning: Currently, Pears is in an <strong>early</strong> state of development. Things may break & change.
+  <img src="https://img.shields.io/github/last-commit/bradp/pears?style=flat-square" alt="Last commit">
+  <br>
+  <br>
+  <a href="https://pears.cloud/">View live demo →</a>
+  <br>
+  <br>
+    :warning: Currently, Pears is in an <strong>early</strong> state of development. Things may break & change.
 </p>
 
 
@@ -51,8 +51,6 @@ Getting set up for using this project requires install a few different things. D
 
 You will need to [install Hugo](https://gohugo.io/getting-started/installing/) if you don't already have it. There are [pre-built binary files](https://github.com/gohugoio/hugo/releases) available for almost every platform.
 
-Most of the included scripts and commands present are reliant on [Yarn](https://classic.yarnpkg.com/en/). If you haven't used it, but are familiar with [npm](https://www.npmjs.com/), it's the exact same experience with a few minor details. Again, there are plenty of ways to [install Yarn](https://classic.yarnpkg.com/en/docs/install/) on the platform of your choice.
-
 ### Installing
 
 Once you have Yarn and Hugo installed on your system, all you need to do is grab a copy of Pears and install the dependencies.
@@ -60,29 +58,29 @@ Once you have Yarn and Hugo installed on your system, all you need to do is grab
 ```
 git clone https://github.com/bradp/pears <your-new-site-name>
 cd <your-new-site-name>
-yarn
+npm i
 ```
 
 ## ⚡️ Usage
 
- - To start up your local development environment: `yarn start`
- - To see a full list of available commands: `yarn run`
+ - To start up your local development environment: `npm start`
+ - To see a full list of available commands: `npm run`
 
 #### Main Commands
 Command | Action
 :- | :-
-`yarn start` | Builds all files & starts up the development server
-`yarn build` | Builds all files for a local or staging environment
-`yarn build:prod` | Builds all files for a deployment to a production server
-`yarn lint` | Check your CSS & JS files for errors Append `:fix` to automatically fix
-`yarn format` | Fix formatting errors automatically
+`npm start` | Builds all files & starts up the development server
+`npm build` | Builds all files for a local or staging environment
+`npm build:prod` | Builds all files for a deployment to a production server
+`npm lint` | Check your CSS & JS files for errors Append `:fix` to automatically fix
+`npm format` | Fix formatting errors automatically
 
 #### Building & Linting
 Command | Action
 :- | :-
-`yarn lint:css` | Lint CSS files Append `:fix` to automatically fix
-`yarn lint:js` | Lint JS files. Append `:fix` to automatically fix
-`yarn format:check` | Check formatting errors without automatically fixing
+`npm lint:css` | Lint CSS files Append `:fix` to automatically fix
+`npm lint:js` | Lint JS files. Append `:fix` to automatically fix
+`npm format:check` | Check formatting errors without automatically fixing
 
 <small>Remember, you can always check <code>yarn run</code> to see  full list of commands!</small>
 
