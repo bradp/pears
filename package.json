@@ -31,7 +31,7 @@
 		"clean": "rimraf public",
 		"format": "npx prettier --write .",
 		"format:check": "npx prettier --check .",
-		"postinstall": "npm run husky install &&w npm run build:hugo",
+		"postinstall": "npx husky install &&w npm run build:hugo",
 		"lint": "npm run lint:css && npm run lint:js",
 		"lint:css": "stylelint 'assets/css/*.css' --syntax css",
 		"lint:css:fix": "stylelint 'assets/css/*.css' --syntax css --fix",
